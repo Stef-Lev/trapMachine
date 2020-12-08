@@ -80,3 +80,7 @@ inset 0 0 10px rgb(131, 14, 37),
 .key {
     font-size: 5rem;
 }
+
+@media (max-width: 760px) {
+    .key { display:none; }
+}
