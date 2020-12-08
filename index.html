@@ -14,44 +14,44 @@
     <main class="container">
         <h1>TRAP PAD</h1>
         <section class="row">
-            <div data-key="97" id="kick" class="button">
+            <div data-key="65" id="kick" class="button">
                 <div class="light"></div>
                 <p class="sound">KICK</p>
                 <div class="key">A</div>
             </div>
-            <div data-key="115" id="snare" class="button">
+            <div data-key="83" id="snare" class="button">
                 <div class="light"></div>
                 <p class="sound">SNARE</p>
                 <div class="key">S</div>
             </div>
-            <div data-key="100" id="clap" class="button">
+            <div data-key="68" id="clap" class="button">
                 <div class="light"></div>
                 <p class="sound">CLAP</p>
                 <div class="key">D</div>
             </div>
-            <div data-key="102" id="bell" class="button">
+            <div data-key="70" id="bell" class="button">
                 <div class="light"></div>
                 <p class="sound">BELL</p>
                 <div class="key">F</div>
             </div>
         </section>
         <section class="row">
-            <div data-key="104" id="closed" class="button">
+            <div data-key="72" id="closed" class="button">
                 <div class="light"></div>
                 <p class="sound">CLOSED HAT</p>
                 <div class="key">H</div>
             </div>
-            <div data-key="106" id="open" class="button">
+            <div data-key="74" id="open" class="button">
                 <div class="light"></div>
                 <p class="sound">OPEN HAT</p>
                 <div class="key">J</div>
             </div>
-            <div data-key="107" id="crash" class="button">
+            <div data-key="75" id="crash" class="button">
                 <div class="light"></div>
                 <p class="sound">CRASH</p>
                 <div class="key">K</div>
             </div>
-            <div data-key="108" id="chant" class="button">
+            <div data-key="76" id="chant" class="button">
                 <div class="light"></div>
                 <p class="sound">CHANT</p>
                 <div class="key">L</div>
@@ -59,16 +59,19 @@
         </section>
     </main>
 
-    <audio data-key="97" src="sounds/kick.wav"></audio>
-    <audio data-key="115" src="sounds/snare.wav"></audio>
-    <audio data-key="100" src="sounds/clap.wav"></audio>
-    <audio data-key="102" src="sounds/bell.wav"></audio>
-    <audio data-key="104" src="sounds/closedhat.wav"></audio>
-    <audio data-key="106" src="sounds/openhat.wav"></audio>
-    <audio data-key="107" src="sounds/crash.wav"></audio>
-    <audio data-key="108" src="sounds/chant.wav"></audio>
+    <audio data-key="65" src="sounds/kick.wav"></audio>
+    <audio data-key="83" src="sounds/snare.wav"></audio>
+    <audio data-key="68" src="sounds/clap.wav"></audio>
+    <audio data-key="70" src="sounds/bell.wav"></audio>
+    <audio data-key="72" src="sounds/closedhat.wav"></audio>
+    <audio data-key="74" src="sounds/openhat.wav"></audio>
+    <audio data-key="75" src="sounds/crash.wav"></audio>
+    <audio data-key="76" src="sounds/chant.wav"></audio>
 
     <script src="./app.js"></script>
+    <script>
+        window.addEventListener('keydown', (e) => console.log(e.which));
+    </script>
 </body>
 
 </html>
