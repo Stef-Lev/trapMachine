@@ -1,18 +1,27 @@
-// function removeTransition(e) {
-//     if (e.propertyName !== 'transform') return;
-//     e.target.classList.remove('playing');
-// }
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+}
 
-// function playSound(e) {
-//     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-//     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-//     if (!audio) return;
+function playSoundDesktop(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    if (!audio) return;
 
-//     key.classList.add('playing');
-//     audio.currentTime = 0;
-//     audio.play();
-// }
+    key.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
+}
+function playSoundMobile(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    if (!audio) return;
 
-// const buttons = Array.from(document.querySelectorAll('.button'));
-// buttons.forEach(button => button.addEventListener('transitionend', removeTransition));
-// window.addEventListener('keydown', playSound);
+    audio.currentTime = 0;
+    audio.play();
+}
+
+const buttons = Array.from(document.querySelectorAll('.button'));
+buttons.forEach(button => button.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playSoundDesktop);
+window.addEventListener('click', playSoundMobile);
