@@ -7,6 +7,7 @@
 
 A simple drum machine to make trap beats on the go.
 
-Just open **index.html** and give it a try.
+Just open **index.html** or click on the image to give it a try.
 
-![Screenshot](trapMachine_preview.png)
+[![Trap Machine](trapMachine_preview.png)](https://stef-lev.github.io/trapMachine/)
+
